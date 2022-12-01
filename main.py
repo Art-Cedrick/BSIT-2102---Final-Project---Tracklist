@@ -1,3 +1,6 @@
+from playlist import Playlist
+from track import Track
+
 def main():
   while True:
     print("Welcome to the next episode of the biggest hit tracklist show.")
@@ -12,10 +15,18 @@ def main():
                     '8 - Shuffle the playlist\n'
                     '0 - Quit\n')
     if MainMenu =='1':
-      
-      
+          UserName = input('Enter your name: ')
+          playlist = Playlist(UserName, 20 ) 
+          print(f"Playlist created for {UserName}.")
+          print(playlist)
     elif MainMenu == '2':
-        
+          TrackTitle = input('Enter the track title: ')
+          TrackArtist = input('Enter the track artist: ')
+          track = Track(TrackTitle, TrackArtist)
+        try: 
+               playlist.addTrack(track)
+        except NameError:
+               print('Please create a playlist first.')
         
     elif MainMenu == '3':
           
