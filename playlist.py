@@ -15,3 +15,21 @@ class Playlist:
       
       return True
     return False
+
+  def shuffle(self):
+    if len(self.__tracks) > 1:
+      self.__tracks = deque(sorted(self.__tracks, key=lambda k: random()))
+      print('Playlist shuffled.')
+    else:
+      print("The playlist is too short to shuffle.")
+      
+  def playNext(self):
+    if len(self.__tracks) > 1:
+      self.__tracks.rotate(1)
+      self.__current_track = self.__tracks[0]
+      print(f'Now playing: {self.__current_track}')
+      return self.__current_track
+    else:
+      print("Cannot play next track.")
+      
+      
