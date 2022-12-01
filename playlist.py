@@ -32,4 +32,18 @@ class Playlist:
     else:
       print("Cannot play next track.")
       
-      
+  def playPrevious(self):
+    if len(self.__tracks) > 1:
+      self.__tracks.rotate(-1)
+      self.__current_track = self.__tracks[0]
+      print(f"Now playing: {self.__current_track}')
+      return self.__current_track
+    else:
+      print("Cannot play previous track.")
+     
+  def repeat(self):
+    if len(self.__tracks) > 0:
+            print(f'Now playing: {self.__current_track}')
+            return self.__current_track
+    else:
+            print("Cannot repeat track.")
