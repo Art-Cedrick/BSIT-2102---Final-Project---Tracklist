@@ -27,16 +27,21 @@ def main():
                playlist.addTrack(track)
         except NameError:
                print('Please create a playlist first.')
-        
     elif MainMenu == '3':
-          
-          
+        try: 
+            playlist.playNext()
+        except NameError:
+              print('Please create a playlist first.')
     elif MainMenu == '4':
-            
-            
+        try:
+            playlist.playPrevious()
+        except NameError:
+              print('Please create a playlist first.')
     elif MainMenu == '5':
-              
-              
+        try: 
+             playlist.repeat()
+        except NameError:
+              print('Please create a playlist first.')
     elif MainMenu == '6':
                 
                 
