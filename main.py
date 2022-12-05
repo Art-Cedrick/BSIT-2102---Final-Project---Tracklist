@@ -19,6 +19,7 @@ def main():
           playlist = Playlist(UserName, 20 ) 
           print(f"Playlist created for {UserName}.")
           print(playlist)
+          
     elif MainMenu == '2':
           TrackTitle = input('Enter the track title: ')
           TrackArtist = input('Enter the track artist: ')
@@ -27,31 +28,43 @@ def main():
                playlist.addTrack(track)
         except NameError:
                print('Please create a playlist first.')
+            
     elif MainMenu == '3':
         try: 
             playlist.playNext()
         except NameError:
               print('Please create a playlist first.')
+            
     elif MainMenu == '4':
         try:
             playlist.playPrevious()
         except NameError:
               print('Please create a playlist first.')
+            
     elif MainMenu == '5':
         try: 
              playlist.repeat()
         except NameError:
               print('Please create a playlist first.')
+            
     elif MainMenu == '6':
-                
+        trackToRemove = input('Enter the track to remove: ')
+        try:
+            playlist.removeTrack(trackToRemove)
+        except NameError:
+            print('Please create a playlist first.')
                 
     elif MainMenu == '7':
-                  
+        print(playlist)
                   
     elif MainMenu == '8':
-                    
+        try:
+            playlist.shuffle()
+        except NameError:
+            print('Please create a playlist first.')
                     
     elif MainMenu == '0':
+        break
       
     else:
       print('Invalid input.')
