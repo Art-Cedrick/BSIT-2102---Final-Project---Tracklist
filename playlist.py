@@ -47,3 +47,23 @@ class Playlist:
             return self.__current_track
     else:
             print("Cannot repeat track.")
+            
+            
+  def removeTrack(self, track):
+    if track in self.__tracks:
+            print(f'Removing{ track} from the playlist.')
+            self.__tracks.remove(tracks)
+            print('You have {} track(s) in your playlist.'.format(
+                    len(self.__tracks)))
+            return True
+      else: 
+            print('Track not found.')
+            return False
+            
+def __str__(self):
+            if len(self.__tracks) == 0 :
+              return f'{self.__name}\'s playlist is empty. Please add a song. \n'
+            
+            tracks = ' '.join(f'{i + 1}.{tracks}' for i, track in enumerate(self.__tracks))
+            return f'{self.__name}\'s Playlist: \n' 
+                   f'{tracks} \n'
