@@ -40,19 +40,19 @@ def main():
         except NameError:
                print('Please create a tracklist first.')
             
-    elif MainMenu == '4':
+    elif MainMenu == '4': # To play the next track
         try: 
             tracklist.playNext()
         except NameError:
               print('Please create a tracklist first.')
             
-    elif MainMenu == '5':
+    elif MainMenu == '5': # To play the previous track
         try:
             tracklist.playPrevious()
         except NameError:
               print('Please create a tracklist first.')
             
-    elif MainMenu == '6':
+    elif MainMenu == '6': # To repeat the current track
         try: 
              tracklist.repeat()
         except NameError:
