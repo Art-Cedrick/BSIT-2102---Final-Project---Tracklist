@@ -11,9 +11,8 @@ def main():
                     '4 - Play the next track\n'
                     '5 - Play the previous track\n'
                     '6 - Repeat the current track\n'
-                    '7 - Remove a track from the tracklist\n'
-                    '8 - Display the tracklist\n'
-                    '9 - Shuffle the tracklist\n'
+                    '7 - Display the tracklist\n'
+                    '8 - Shuffle the tracklist\n'
                     '0 - Quit\n')
     if MainMenu =='1':
           UserName = input('Enter your name: ')
@@ -57,17 +56,12 @@ def main():
         except NameError:
               print('Please create a tracklist first.')
             
-    elif MainMenu == '7':
-        trackToRemove = input('Enter the track to remove: ')
-        try:
-            tracklist.removeTrack(trackToRemove)
-        except NameError:
-            print('Please create a tracklist first.')
+    
                 
-    elif MainMenu == '8':
+    elif MainMenu == '7':
         print(tracklist)
                   
-    elif MainMenu == '9':
+    elif MainMenu == '8':
         try:
             tracklist.shuffle()
         except NameError:
