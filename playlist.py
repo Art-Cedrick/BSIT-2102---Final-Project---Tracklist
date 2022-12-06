@@ -10,7 +10,9 @@ class Tracklist:
     seld.__current_track = None 
     
   def addTracktoFirst (self, track):
-		
+	"""
+	Adds a song at the beginning of the tracklist.
+	"""
 		if track not in self.__tracks:
 			self.__tracks.appendleft(track)
 			self.__current_track = track
@@ -22,32 +24,41 @@ class Tracklist:
 		return False
     
   def addTracktoLast (self, track):
-    self.__tracks.append(track)
-    if self.__current_track is None:
-      self.__current_track = track
-      print(f'Now playing: {self.__current_track}')
-    else:
-      print(f'{track} added to the tracklist.')
-      print('You have {} track(s) in your tracklist.'.format(len(self.__tracks)))
-      
-      return True
-    return False
+  	"""
+	Adds a song at the end of the tracklist.
+	"""
+	    self.__tracks.append(track)
+	    if self.__current_track is None:
+	      self.__current_track = track
+	      print(f'Now playing: {self.__current_track}')
+	    else:
+	      print(f'{track} added to the tracklist.')
+	      print('You have {} track(s) in your tracklist.'.format(len(self.__tracks)))
+
+	      return True
+	    return False
 
   def shuffle(self):
-    if len(self.__tracks) > 1:
-      self.__tracks = deque(sorted(self.__tracks, key=lambda k: random()))
-      print('Tracklist shuffled.')
-    else:
-      print("The tracklist is too short to shuffle.")
+  	"""
+	Shuffles the tracklist.
+	"""
+	    if len(self.__tracks) > 1:
+	      self.__tracks = deque(sorted(self.__tracks, key=lambda k: random()))
+	      print('Tracklist shuffled.')
+	    else:
+	      print("The tracklist is too short to shuffle.")
       
   def playNext(self):
-    if len(self.__tracks) > 1:
-      self.__tracks.rotate(1)
-      self.__current_track = self.__tracks[0]
-      print(f'Now playing: {self.__current_track}')
-      return self.__current_track
-    else:
-      print("Cannot play next track.")
+  	"""
+	Plays the next track in the tracklist.
+	"""
+	    if len(self.__tracks) > 1:
+	      self.__tracks.rotate(1)
+	      self.__current_track = self.__tracks[0]
+	      print(f'Now playing: {self.__current_track}')
+	      return self.__current_track
+	    else:
+	      print("Cannot play next track.")
       
   def playPrevious(self):
     if len(self.__tracks) > 1:
