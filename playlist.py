@@ -1,17 +1,34 @@
+from collections import deque
+from random import random
+from track import Track
+
+
 class Tracklist:
   def __init__(self, name, length):
     self.__name = name
     self.__tracks = deque(maxlen=length)
     seld.__current_track = None 
     
-  def addtrack (self, track):
+  def addTracktoFirst (self, track):
+		
+		if track not in self.__tracks:
+			self.__tracks.appendleft(track)
+			self.__current_track = track
+			# Current song will always be the first song in the deque
+			print(f'Now playing: {self.__current_track}')
+			print('You have {} track(s) in your tracklist.'.format(
+				len(self.__tracks)))
+			return True
+		return False
+    
+  def addTracktoLast (self, track):
     self.__tracks.append(track)
     if self.__current_track is None:
       self.__current_track = track
       print(f'Now playing: {self.__current_track}')
     else:
-      print(f'{track} added to the playlist.')
-      print('You have {} track(s) in your playlist.'.format(len(self.__tracks)))
+      print(f'{track} added to the tracklist.')
+      print('You have {} track(s) in your tracklist.'.format(len(self.__tracks)))
       
       return True
     return False
