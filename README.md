@@ -6,7 +6,7 @@ Make a playlist for your pet, a road trip, a gym session… Anything!
 
 A python program to create a tracklist with the following functions:
 
-* Creat a new tracklist 
+* Create a new tracklist 
 * Add a song at the beginning of the tracklist 
 * Add a song at the end of the tracklist 
 * Play the next song
