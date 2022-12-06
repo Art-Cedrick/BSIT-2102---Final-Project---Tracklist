@@ -77,7 +77,7 @@ class Tracklist:
             print('Track not found.')
             return False
             
-def __str__(self):
+   def __str__(self):
             if len(self.__tracks) == 0 :
               return f'{self.__name}\'s tracklist is empty. Please add a song. \n'
             
