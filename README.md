@@ -13,3 +13,9 @@ A python program that creates a tracklist with the following functions:
 * Play the previous song
 * Display the tracklist
 * Shuffle the tracklist
+
+# Contributors // Members
+* Abrahan, John Neldine M.
+* Cueto, Daniel Isaaiah T.
+* Platon, Art Cedrick C.
+* Sanchez, Kim William B.
