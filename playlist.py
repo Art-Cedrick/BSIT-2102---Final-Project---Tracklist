@@ -66,16 +66,6 @@ class Tracklist:
             print("Cannot repeat track.")
             
             
-  def removeTrack(self, track):
-    if track in self.__tracks:
-            print(f'Removing{ track} from the tracklist.')
-            self.__tracks.remove(tracks)
-            print('You have {} track(s) in your tracklist.'.format(
-                    len(self.__tracks)))
-            return True
-      else: 
-            print('Track not found.')
-            return False
             
    def __str__(self):
             if len(self.__tracks) == 0 :
