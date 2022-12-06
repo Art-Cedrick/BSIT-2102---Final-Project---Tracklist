@@ -14,7 +14,7 @@ def main():
                     '7 - Display the tracklist\n'
                     '8 - Shuffle the tracklist\n'
                     '0 - Quit\n')
-    if MainMenu =='1':
+    if MainMenu =='1': # Creating a new tracklist
           UserName = input('Enter your name: ')
 		# 20 is the amount of sos one can put on the tracklist to
 		# demonstrate the functionality of the program using a deque.
@@ -23,7 +23,7 @@ def main():
           print(tracklist)
           
           
-    elif MainMenu == '2':
+    elif MainMenu == '2': # Adding a track at the beginning of the tracklist
 			    TrackTitle = input('Enter the song title: ')
 			    TrackArtist = input('Enter the song artist: ')
 			    track = Track(TrackTitle, TrackArtist)
@@ -31,7 +31,7 @@ def main():
 				       tracklist.addTracktoFirst (track)
 			except NameError:
 				        print('Please create a tracklist first.')
-    elif MainMenu == '3':
+    elif MainMenu == '3': # Adding a track at the end of the tracklist
           TrackTitle = input('Enter the track title: ')
           TrackArtist = input('Enter the track artist: ')
           track = Track(TrackTitle, TrackArtist)
