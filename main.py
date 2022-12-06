@@ -60,20 +60,20 @@ def main():
             
     
                 
-    elif MainMenu == '7':
+    elif MainMenu == '7': # To display the whole tracklist
         print(tracklist)
                   
-    elif MainMenu == '8':
+    elif MainMenu == '8': # To shuffle the playlist
         try:
             tracklist.shuffle()
         except NameError:
             print('Please create a tracklist first.')
                     
-    elif MainMenu == '0':
+    elif MainMenu == '0': # Exit
         break
       
     else:
-      print('Invalid input.')
+      print('Invalid input.') # User input were out of the choices
       
       
 if__name__=='__main__':
