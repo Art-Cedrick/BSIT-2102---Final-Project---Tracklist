@@ -1,4 +1,4 @@
-class Playlist:
+class Tracklist:
   def __init__(self, name, length):
     self.__name = name
     self.__tracks = deque(maxlen=length)
@@ -19,9 +19,9 @@ class Playlist:
   def shuffle(self):
     if len(self.__tracks) > 1:
       self.__tracks = deque(sorted(self.__tracks, key=lambda k: random()))
-      print('Playlist shuffled.')
+      print('Tracklist shuffled.')
     else:
-      print("The playlist is too short to shuffle.")
+      print("The tracklist is too short to shuffle.")
       
   def playNext(self):
     if len(self.__tracks) > 1:
@@ -51,9 +51,9 @@ class Playlist:
             
   def removeTrack(self, track):
     if track in self.__tracks:
-            print(f'Removing{ track} from the playlist.')
+            print(f'Removing{ track} from the tracklist.')
             self.__tracks.remove(tracks)
-            print('You have {} track(s) in your playlist.'.format(
+            print('You have {} track(s) in your tracklist.'.format(
                     len(self.__tracks)))
             return True
       else: 
@@ -62,8 +62,8 @@ class Playlist:
             
 def __str__(self):
             if len(self.__tracks) == 0 :
-              return f'{self.__name}\'s playlist is empty. Please add a song. \n'
+              return f'{self.__name}\'s tracklist is empty. Please add a song. \n'
             
             tracks = ' '.join(f'{i + 1}.{tracks}' for i, track in enumerate(self.__tracks))
-            return f'{self.__name}\'s Playlist: \n' 
+            return f'{self.__name}\'s Tracklist: \n' 
                    f'{tracks} \n'
