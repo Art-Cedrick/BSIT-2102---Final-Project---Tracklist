@@ -11,6 +11,5 @@ A python program to create a tracklist with the following functions:
 * Add a song at the end of the tracklist 
 * Play the next song
 * Play the previous song
-* Remove a song from the tracklist 
 * Display the tracklist
 * Shuffle the tracklist 
