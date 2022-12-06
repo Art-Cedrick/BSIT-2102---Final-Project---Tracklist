@@ -16,6 +16,8 @@ def main():
                     '0 - Quit\n')
     if MainMenu =='1':
           UserName = input('Enter your name: ')
+		# 20 is the amount of sos one can put on the tracklist to
+		# demonstrate the functionality of the program using a deque.
           tracklist = Tracklist(UserName, 20 ) 
           print(f"Playlist created for {UserName}.")
           print(tracklist)
